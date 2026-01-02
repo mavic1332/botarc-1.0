@@ -1,3 +1,5 @@
+import logging
+import os
 import sqlite3
 import re
 import requests
@@ -1273,6 +1275,7 @@ def poll():
 if __name__ == "__main__":
     init_db()
     poll()
+
 
 
 
