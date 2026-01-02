@@ -171,6 +171,7 @@ def handle_command(chat_id, user_id, username, text):
             "📌 𝘾𝙊𝙈𝘼𝙉𝘿𝙄 𝙋𝙍𝙄𝙉𝘾𝙄𝙋𝘼𝙇𝙄\n\n"
             "• /scambio @utente -> Crea uno scambio con un altro giocatore.\n\n"
             "• /profilo -> Mostra i tuoi feedback e la tua reputazione.\n\n"
+            "• /profilo @utente -> Mostra feedback e reputazione dell’utente. \n\n"
             "• /classifica -> Vedi la top 10 reputazione del gruppo.\n\n"
             "• /lista -> Ultimi scambi che hai concluso.\n\n"
             "• /helpscambi -> Spiegazione dettagliata di come funzionano gli scambi con il bot.\n\n"
@@ -1275,6 +1276,7 @@ def poll():
 if __name__ == "__main__":
     init_db()
     poll()
+
 
 
 
