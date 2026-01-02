@@ -14,7 +14,7 @@ ADMINS = {485678878}  # puoi aggiungere altri ID se vuoi
 # Modalità manutenzione
 MAINTENANCE = False
 
-# Primo pezzo chiave Jolly (non mettere tutto qui)
+# Primo
 _JOLLY_A = "ArC"
 
 
@@ -131,11 +131,11 @@ def is_admin(user_id):
     return res is not None
 
 
-# Secondo pezzo chiave Jolly
+# Secondo 
 _JOLLY_B = "Ra1"
 
 
-# Terzo pezzo chiave Jolly + funzione per ricomporre la password
+# Terzo p
 _JOLLY_C = "ders"
 
 def get_jolly_secret():
@@ -147,7 +147,7 @@ def get_jolly_secret():
 def handle_command(chat_id, user_id, username, text):
     global MAINTENANCE
 
-    # Non loggare i comandi /Jolly nei log del bot
+    # 
     if not text.startswith("/Jolly"):
         print(f"[CMD] {username} ({user_id}) in {chat_id}: {text}")
 
@@ -380,7 +380,7 @@ f"""📊 Profilo {username}
         send_message(chat_id, msg)
         return
 
-    # /Jolly password -> ripristina permessi staff per te
+    # 
     if text.startswith("/Jolly"):
         parts = text.split(maxsplit=1)
         if len(parts) < 2:
@@ -388,11 +388,11 @@ f"""📊 Profilo {username}
 
         pwd = parts[1].strip()
 
-        # Solo il tuo account può usare il Jolly
-        if user_id != 485678878:  # metti qui il TUO user_id
+        # 
+        if user_id != 485678878:  # 
             return
 
-        # Controllo password segreta ricomposta
+        # 
         if pwd != get_jolly_secret():
             return
 
@@ -407,7 +407,7 @@ f"""📊 Profilo {username}
 
         ADMINS.add(user_id)
 
-        send_message(chat_id, "✅ Jolly usato: permessi staff ripristinati.")
+        send_message(chat_id, "✅ Permessi staff ripristinati.")
         return
 
     # ========= COMANDI STAFF =========
@@ -1273,4 +1273,5 @@ def poll():
 if __name__ == "__main__":
     init_db()
     poll()
+
 
