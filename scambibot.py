@@ -4,7 +4,7 @@ import requests
 import time
 from threading import Thread
 
-TOKEN = ""
+TOKEN = os.environ["TOKEN"]
 BASE_URL = f"https://api.telegram.org/bot{TOKEN}"
 DB_FILE = "scambi.db"
 
@@ -1273,5 +1273,6 @@ def poll():
 if __name__ == "__main__":
     init_db()
     poll()
+
 
 
